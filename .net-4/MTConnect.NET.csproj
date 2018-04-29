@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7ECE6E3-647D-4F74-B63E-C509153EB4B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MTConnect</RootNamespace>
+    <AssemblyName>MTConnect-NET</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\TrakHound-Community\src\packages\RestSharp.105.2.3\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\src\Clients\Asset.cs" />
+    <Compile Include="..\src\Clients\Current.cs" />
+    <Compile Include="..\src\Clients\SampleRange.cs" />
+    <Compile Include="..\src\Delegates.cs" />
+    <Compile Include="..\src\Clients\MTConnectClient.cs" />
+    <Compile Include="..\src\Clients\Probe.cs" />
+    <Compile Include="..\src\Clients\Sample.cs" />
+    <Compile Include="..\src\MTConnectAssets\AssetCollection.cs" />
+    <Compile Include="..\src\MTConnectDevices\ComponentCollection.cs" />
+    <Compile Include="..\src\MTConnectDevices\Component.cs" />
+    <Compile Include="..\src\Namespaces.cs" />
+    <Compile Include="..\src\Version.cs" />
+    <Compile Include="..\src\Headers\MTConnectAssestsHeader.cs" />
+    <Compile Include="..\src\MTConnectError\ErrorCode.cs" />
+    <Compile Include="..\src\Headers\MTConnectDevicesHeader.cs" />
+    <Compile Include="..\src\Headers\MTConnectErrorHeader.cs" />
+    <Compile Include="..\src\Headers\MTConnectStreamsHeader.cs" />
+    <Compile Include="..\src\Clients\Stream.cs" />
+    <Compile Include="..\src\ConditionValue.cs" />
+    <Compile Include="..\src\DataItemCategory.cs" />
+    <Compile Include="..\src\Properties\AssemblyInfo.cs" />
+    <Compile Include="..\src\Types\Conditions.cs" />
+    <Compile Include="..\src\Types\Events.cs" />
+    <Compile Include="..\src\Types\Samples.cs" />
+    <Compile Include="..\src\MTConnectAssets\Asset.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\CuttingItem.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\CuttingToolLifeCycle.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\CuttingTool.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\CutterStatus.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\Description.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ItemLife.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\Location.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\LocationType.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\Measurement.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ProcessFeedrate.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ProcessSpindleSpeed.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ReconditionCount.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ToolLifeCountDirection.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ToolLifeType.cs" />
+    <Compile Include="..\src\MTConnectAssets\Document.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ToolLife.cs" />
+    <Compile Include="..\src\MTConnectDevices\Constraints.cs" />
+    <Compile Include="..\src\MTConnectDevices\DataItem.cs" />
+    <Compile Include="..\src\MTConnectDevices\Description.cs" />
+    <Compile Include="..\src\MTConnectDevices\Device.cs" />
+    <Compile Include="..\src\MTConnectDevices\Document.cs" />
+    <Compile Include="..\src\MTConnectDevices\Filter.cs" />
+    <Compile Include="..\src\MTConnectDevices\Source.cs" />
+    <Compile Include="..\src\MTConnectError\Document.cs" />
+    <Compile Include="..\src\MTConnectError\Error.cs" />
+    <Compile Include="..\src\MTConnectStreams\ComponentStream.cs" />
+    <Compile Include="..\src\MTConnectStreams\Condition.cs" />
+    <Compile Include="..\src\MTConnectStreams\DataItem.cs" />
+    <Compile Include="..\src\MTConnectStreams\DataItemCollection.cs" />
+    <Compile Include="..\src\MTConnectStreams\DeviceStream.cs" />
+    <Compile Include="..\src\MTConnectStreams\Document.cs" />
+    <Compile Include="..\src\MTConnectStreams\Event.cs" />
+    <Compile Include="..\src\MTConnectStreams\Sample.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="T..\src\ypes\EventTypes.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\src\Types\ConditionTypes.xml" />
+    <EmbeddedResource Include="..\src\Types\SampleTypes.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+    <PostBuildEvent>if exist $(ProjectDir)..\src\nuget.exe $(ProjectDir)..\src\nuget pack $(ProjectPath)..\src\ -properties Configuration=Release</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

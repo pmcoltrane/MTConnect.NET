@@ -1,0 +1,86 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>library</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Deterministic>False</Deterministic>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="RestSharp" Version="106.2.1"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\src\Clients\Asset.cs" />
+    <Compile Include="..\src\Clients\Current.cs" />
+    <Compile Include="..\src\Clients\SampleRange.cs" />
+    <Compile Include="..\src\Delegates.cs" />
+    <Compile Include="..\src\Clients\MTConnectClient.cs" />
+    <Compile Include="..\src\Clients\Probe.cs" />
+    <Compile Include="..\src\Clients\Sample.cs" />
+    <Compile Include="..\src\MTConnectAssets\AssetCollection.cs" />
+    <Compile Include="..\src\MTConnectDevices\ComponentCollection.cs" />
+    <Compile Include="..\src\MTConnectDevices\Component.cs" />
+    <Compile Include="..\src\Namespaces.cs" />
+    <Compile Include="..\src\Version.cs" />
+    <Compile Include="..\src\Headers\MTConnectAssestsHeader.cs" />
+    <Compile Include="..\src\MTConnectError\ErrorCode.cs" />
+    <Compile Include="..\src\Headers\MTConnectDevicesHeader.cs" />
+    <Compile Include="..\src\Headers\MTConnectErrorHeader.cs" />
+    <Compile Include="..\src\Headers\MTConnectStreamsHeader.cs" />
+    <Compile Include="..\src\Clients\Stream.cs" />
+    <Compile Include="..\src\ConditionValue.cs" />
+    <Compile Include="..\src\DataItemCategory.cs" />
+    <Compile Include="..\src\Properties\AssemblyInfo.cs" />
+    <Compile Include="..\src\Types\Conditions.cs" />
+    <Compile Include="..\src\Types\Events.cs" />
+    <Compile Include="..\src\Types\Samples.cs" />
+    <Compile Include="..\src\MTConnectAssets\Asset.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\CuttingItem.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\CuttingToolLifeCycle.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\CuttingTool.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\CutterStatus.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\Description.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ItemLife.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\Location.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\LocationType.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\Measurement.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ProcessFeedrate.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ProcessSpindleSpeed.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ReconditionCount.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ToolLifeCountDirection.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ToolLifeType.cs" />
+    <Compile Include="..\src\MTConnectAssets\Document.cs" />
+    <Compile Include="..\src\MTConnectAssets\CuttingTools\ToolLife.cs" />
+    <Compile Include="..\src\MTConnectDevices\Constraints.cs" />
+    <Compile Include="..\src\MTConnectDevices\DataItem.cs" />
+    <Compile Include="..\src\MTConnectDevices\Description.cs" />
+    <Compile Include="..\src\MTConnectDevices\Device.cs" />
+    <Compile Include="..\src\MTConnectDevices\Document.cs" />
+    <Compile Include="..\src\MTConnectDevices\Filter.cs" />
+    <Compile Include="..\src\MTConnectDevices\Source.cs" />
+    <Compile Include="..\src\MTConnectError\Document.cs" />
+    <Compile Include="..\src\MTConnectError\Error.cs" />
+    <Compile Include="..\src\MTConnectStreams\ComponentStream.cs" />
+    <Compile Include="..\src\MTConnectStreams\Condition.cs" />
+    <Compile Include="..\src\MTConnectStreams\DataItem.cs" />
+    <Compile Include="..\src\MTConnectStreams\DataItemCollection.cs" />
+    <Compile Include="..\src\MTConnectStreams\DeviceStream.cs" />
+    <Compile Include="..\src\MTConnectStreams\Document.cs" />
+    <Compile Include="..\src\MTConnectStreams\Event.cs" />
+    <Compile Include="..\src\MTConnectStreams\Sample.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\src\Types\EventTypes.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\src\Types\ConditionTypes.xml" />
+    <EmbeddedResource Include="..\src\Types\SampleTypes.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\packages.config" />
+  </ItemGroup>
+</Project>
