@@ -11,7 +11,7 @@
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="RestSharp" Version="106.2.1"/>
+    <PackageReference Include="RestSharp" Version="106.3.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\MTConnect.NET\Clients\Asset.cs" />
